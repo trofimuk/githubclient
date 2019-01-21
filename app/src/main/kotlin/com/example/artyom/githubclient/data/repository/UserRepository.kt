@@ -16,11 +16,11 @@ class UserRepository @Inject constructor(
     private val remoteUserDataSource: RemoteUserDataSource
 ) : Repository{
 
-    private val allCompositeDisposable: MutableList<Disposable> = arrayListOf()
+    val allCompositeDisposable: MutableList<Disposable> = arrayListOf()
 
     override fun getUsers(): LiveData<MutableList<User>> {
         val mutableLiveData = MutableLiveData<MutableList<User>>()
-        val disposable = remoteUserDataSource.requestGetUsers()
+        val disposable = remoteUserDataSource.requestGetUsersSource()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { userResponse ->
@@ -32,7 +32,6 @@ class UserRepository @Inject constructor(
 
     private fun transform(users: MutableList<UserResponse>): MutableList<User>{
         val userList = ArrayList<User>()
-
         users.forEach{
             userList.add(User(it.id,it.login,it.urlAvatar))
         }

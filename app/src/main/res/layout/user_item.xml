@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/twUserLogin"
+        android:id="@+id/tvUserLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
@@ -30,7 +30,7 @@
         android:layout_marginEnd="20dp"  />
 
     <TextView
-        android:id="@+id/twId"
+        android:id="@+id/tvId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="50dp"

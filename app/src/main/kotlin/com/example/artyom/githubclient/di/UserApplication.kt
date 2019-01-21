@@ -1,9 +1,8 @@
 package com.example.artyom.githubclient.di
 
-import android.annotation.SuppressLint
 import android.app.Application
 
-@SuppressLint("Registered")
+
 class UserApplication: Application() {
 
     companion object {
