@@ -12,5 +12,9 @@ class RemoteContract {
         const val URL_AVATAR = "avatar_url"
 
         const val SUCCESS = "success"
+
+        const val SINCE = "since"
+        const val PER_PAGE = "per_page"
+        const val START_PER_PAGE :Long = 0
     }
 }

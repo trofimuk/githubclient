@@ -1,8 +1,9 @@
 package com.example.artyom.githubclient.data.repository
 
-import android.arch.lifecycle.LiveData
-import com.example.artyom.githubclient.domain.User
+import com.example.artyom.githubclient.data.remote.UserResponse
+import io.reactivex.Observable
 
 interface Repository {
-    fun getUsers(): LiveData<MutableList<User>>
+
+    fun getUsers(userId: Long, perPage: Int): Observable<MutableList<UserResponse>>
 }
