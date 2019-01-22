@@ -14,13 +14,15 @@
             android:supportsRtl="true"
             android:name=".di.UserApplication"
             android:theme="@style/AppTheme">
-        <activity android:name=".view.GetUsersActivity">
+        <activity android:name=".view.activity.GetUsersActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".view.activity.UserDetailsActivity"/>
     </application>
 
 </manifest>

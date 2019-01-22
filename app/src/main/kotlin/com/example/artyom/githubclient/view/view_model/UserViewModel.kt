@@ -1,4 +1,4 @@
-package com.example.artyom.githubclient.view
+package com.example.artyom.githubclient.view.view_model
 
 import android.arch.lifecycle.*
 import android.arch.paging.LivePagedListBuilder

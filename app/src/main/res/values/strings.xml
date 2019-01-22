@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GitHubClient</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="company">Company:</string>
+    <string name="followers">Followers:</string>
+    <string name="following">Following:</string>
+    <string name="date_created">Date created:</string>
+    <string name="not_known">not known</string>
 </resources>

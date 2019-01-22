@@ -1,11 +1,11 @@
 package com.example.artyom.githubclient.view.adapter
 
 import android.arch.paging.PagedListAdapter
-import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
 import com.example.artyom.githubclient.domain.User
 import android.support.v7.util.DiffUtil
+
 
 class UserPagedAdapter : PagedListAdapter <User, RecyclerView.ViewHolder>(UserDiffCallback) {
 

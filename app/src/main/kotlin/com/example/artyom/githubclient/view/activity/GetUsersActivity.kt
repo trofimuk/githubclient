@@ -1,4 +1,4 @@
-package com.example.artyom.githubclient.view
+package com.example.artyom.githubclient.view.activity
 
 
 import android.arch.lifecycle.Observer
@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.example.artyom.githubclient.R
 import com.example.artyom.githubclient.domain.User
+import com.example.artyom.githubclient.view.view_model.UserViewModel
 import com.example.artyom.githubclient.view.adapter.UserPagedAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
