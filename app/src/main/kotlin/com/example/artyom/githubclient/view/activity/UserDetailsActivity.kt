@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.artyom.githubclient.R
+import com.example.artyom.githubclient.data.remote.RemoteContract
 import com.example.artyom.githubclient.view.view_model.UserDetailsViewModel
 import kotlinx.android.synthetic.main.user_details_activity.*
 import java.text.ParseException
@@ -14,7 +15,6 @@ import java.util.*
 
 class UserDetailsActivity : AppCompatActivity() {
     private lateinit var userDetailsViewModel: UserDetailsViewModel
-    private var login : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +24,13 @@ class UserDetailsActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        getIntentData()
+    }
+
+    private fun getIntentData(){
         val intentUserDetail = intent
-        if (intentUserDetail.getStringExtra("login") != null) {
-            loadDate(intentUserDetail.getStringExtra("login"))
+        if (intentUserDetail.getStringExtra(RemoteContract.LOGIN) != null) {
+            loadDate(intentUserDetail.getStringExtra(RemoteContract.LOGIN))
         }
     }
 

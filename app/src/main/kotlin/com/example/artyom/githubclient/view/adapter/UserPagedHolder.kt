@@ -9,6 +9,7 @@ import com.example.artyom.githubclient.R
 import com.example.artyom.githubclient.domain.User
 import kotlinx.android.synthetic.main.user_item.view.*
 import android.content.Intent
+import com.example.artyom.githubclient.data.remote.RemoteContract
 import com.example.artyom.githubclient.view.activity.UserDetailsActivity
 
 
@@ -25,7 +26,7 @@ class UserPagedHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         itemView.setOnClickListener {
             val intentDetailsUSer = Intent(it.context,UserDetailsActivity::class.java)
-            intentDetailsUSer.putExtra("login",user?.login)
+            intentDetailsUSer.putExtra(RemoteContract.LOGIN,user?.login)
             it.context.startActivity(intentDetailsUSer)
         }
     }
